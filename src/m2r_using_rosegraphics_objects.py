@@ -17,15 +17,15 @@ Authors: David Mutchler, Dave Fisher, Vibha Alangar, Mark Hays, Amanda Stouder,
 #     a. For the RoseGraphics coordinate system:
 #
 #        -- Where is the (0, 0) point on the screen?
-#              WRITE_YOUR_ANSWER_HERE,_REPLACING_THIS
+#                     Right
 #
 #        -- In what direction on the screen
 #           does the positive X-axis point?
-#              WRITE_YOUR_ANSWER_HERE,_REPLACING_THIS
+#                     Right
 #
 #        -- In what direction on the screen
 #           does the positive Y-axis point?
-#              WRITE_YOUR_ANSWER_HERE,_REPLACING_THIS
+#                      Down
 #
 #     b. Write a line of code that constructs a RoseWindow object:
 #            WRITE_YOUR_ANSWER_HERE,_REPLACING_THIS
@@ -45,11 +45,13 @@ Authors: David Mutchler, Dave Fisher, Vibha Alangar, Mark Hays, Amanda Stouder,
 #                WRITE_YOUR_ANSWER_HERE,_REPLACING_THIS
 #
 #          -- Write the names of three METHODs that Circle objects have:
-#                WRITE_YOUR_ANSWER_HERE,_REPLACING_THIS
+#                circle.attach_to (window)
+#                circle.fill_color()
+#                circle.move_by()
 #
 #          -- Write the names of three INSTANCE VARIABLEs that Circle
-#             objects have:
-#                WRITE_YOUR_ANSWER_HERE,_REPLACING_THIS
+#             objects have.
+
 #
 #     f. What does a RoseWindow RENDER method do?
 #            WRITE_YOUR_ANSWER_HERE,_REPLACING_THIS
