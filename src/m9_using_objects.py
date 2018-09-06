@@ -5,8 +5,8 @@ This module lets you practice  ** using objects **, including:
   -- accessing their DATA via INSTANCE VARIABLES
 
 Authors: David Mutchler, Dave Fisher, Vibha Alangar, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and BERT.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 
@@ -14,7 +14,7 @@ import rosegraphics as rg
 def main():
     """ Calls the other functions to demonstrate and/or test them. """
     # Test your functions by putting calls to them here:
-
+    circle_and_rectangle()
 
 def two_circles():
     """
@@ -33,7 +33,14 @@ def two_circles():
     # Put a statement in   main   to test this function
     #    (by calling this function).
     # ------------------------------------------------------------------
-
+    window = rg.RoseWindow(400,400)
+    circle1 = rg.Circle(rg.Point(200,200),10)
+    circle2 = rg.Circle(rg.Point(50,300),20)
+    circle1.fill_color = 'blue'
+    circle1.attach_to(window)
+    circle2.attach_to(window)
+    window.render()
+    window.close_on_mouse_click()
 
 def circle_and_rectangle():
     """
@@ -75,7 +82,19 @@ def circle_and_rectangle():
     # IMPORTANT: Use the DOT TRICK to guess the names of the relevant
     #       instance variables for outline thickness, etc.
     # ------------------------------------------------------------------
-
+    window = rg.RoseWindow(400,400)
+    circle = rg.Circle(rg.Point(200,100),10)
+    circle.fill_color = 'blue'
+    circle.outline_thickness = 1
+    circle.attach_to(window)
+    rectangle = rg.Rectangle(rg.Point(200,100),rg.Point(100,300))
+    rectangle.outline_thickness = 1
+    rectangle.attach_to(window)
+    print(circle.outline_thickness)
+    print(circle.fill_color)
+    print(circle.center)
+    (x,y) = circle.center
+    print(x)
 
 def lines():
     """
