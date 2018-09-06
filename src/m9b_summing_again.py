@@ -70,7 +70,7 @@ def sum_powers(n, p):
 def run_test_sum_powers_in_range():
     """ Tests the   sum_powers_in_range   function. """
     # ------------------------------------------------------------------
-    # TODO: 4. Implement this function.
+    # DONE: 4. Implement this function.
     #   It TESTS the  sum_powers_in_range  function defined below.
     #   Include at least **   3   ** tests.
     #
@@ -81,7 +81,18 @@ def run_test_sum_powers_in_range():
     print('--------------------------------------------------')
     print('Testing the   sum_powers_in_range   function:')
     print('--------------------------------------------------')
-
+    expected = 142.384776
+    answer = sum_powers_in_range(3,100,0.1)
+    print('The expected is', expected)
+    print('The real number is', answer)
+    expected = 3
+    answer = sum_powers_in_range(1,2,1)
+    print('The expected is', expected)
+    print('The real number is', answer)
+    expected = 14
+    answer = sum_powers_in_range(1,3,2)
+    print('The expected is', expected)
+    print('The real number is', answer)
 
 def sum_powers_in_range(m, n, p):
     """
@@ -96,12 +107,16 @@ def sum_powers_in_range(m, n, p):
       -- sum_powers_in_range(3, 100, 0.1) returns about 142.384776
     """
     # ------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # DONE: 5. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #
     #   No fair running the code of  sum_powers_in_range  to GENERATE
     #   test cases; that would defeat the purpose of TESTING!
     # ------------------------------------------------------------------
+    sum = 0
+    for k in range(n-m+1):
+        sum = sum + (m+k)**p
+    return sum
 
 
 # ----------------------------------------------------------------------
