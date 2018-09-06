@@ -17,7 +17,7 @@ Authors: David Mutchler, Dave Fisher, Vibha Alangar, Mark Hays, Amanda Stouder,
 #     a. For the RoseGraphics coordinate system:
 #
 #        -- Where is the (0, 0) point on the screen?
-#                     Right
+#               In the upper left corner
 #
 #        -- In what direction on the screen
 #           does the positive X-axis point?
@@ -28,11 +28,11 @@ Authors: David Mutchler, Dave Fisher, Vibha Alangar, Mark Hays, Amanda Stouder,
 #                      Down
 #
 #     b. Write a line of code that constructs a RoseWindow object:
-#            WRITE_YOUR_ANSWER_HERE,_REPLACING_THIS
-#
+#            circle = rg.Circle(rg.Point(200,100),10)
+#             line = rg.Line
 #     c. What is the default height of a RoseWindow?
 #        (Use the HOVER trick to determine the answer to this question.)
-#            WRITE_YOUR_ANSWER_HERE,_REPLACING_THIS
+#                               300
 #
 #     d. Write a line of code that construct a RoseWindow object
 #        whose height is 100:  (Use the HOVER trick to figure it out)
@@ -42,7 +42,8 @@ Authors: David Mutchler, Dave Fisher, Vibha Alangar, Mark Hays, Amanda Stouder,
 #
 #          -- Write the names of two types of graphics objects that
 #             you can construct OTHER than Circle and Point:
-#                WRITE_YOUR_ANSWER_HERE,_REPLACING_THIS
+#                rectangle = rg.Rectangle
+#
 #
 #          -- Write the names of three METHODs that Circle objects have:
 #                circle.attach_to (window)
@@ -54,18 +55,18 @@ Authors: David Mutchler, Dave Fisher, Vibha Alangar, Mark Hays, Amanda Stouder,
 
 #
 #     f. What does a RoseWindow RENDER method do?
-#            WRITE_YOUR_ANSWER_HERE,_REPLACING_THIS
+#            print the pattern of objects
 #
 #     g. When is a RoseWindow close_on_mouse_click method call
 #        necessary?  Why?
-#            WRITE_YOUR_ANSWER_HERE,_REPLACING_THIS
+#                  use it to see the pattern clearly.
 #
 #   ASK QUESTIONS ** NOW ** if you do not understand how the
 #     RoseGraphics graphics system works.
 #
 #   When you are confident that you have written correct answers
 #   to the above questions (ASK QUESTIONS AS NEEDED!),
-#   change the above TODO to DONE.
+#   change the above DONE.
 #
 ########################################################################
 
@@ -79,10 +80,11 @@ def main():
       -- applying METHODS to them, and
       -- accessing their DATA via INSTANCE VARIABLES
     """
-    example1()
-    example2()
-    example3()
-
+    window = rg.RoseWindow()
+    point1 = rg.Point(0,0)
+    point1.attach_to(window)
+    window.render()
+    window.close_on_mouse_click()
 
 def example1():
     """ Displays an empty window. """
@@ -147,7 +149,6 @@ def example3():
     point2 = rg.Point(200, 50)
     rectangle = rg.Rectangle(point1, point2)
     rectangle.attach_to(window)
-    rectangle .
     # ------------------------------------------------------------------
     # render: Draw ALL the objects attached to this window.
     # ------------------------------------------------------------------
