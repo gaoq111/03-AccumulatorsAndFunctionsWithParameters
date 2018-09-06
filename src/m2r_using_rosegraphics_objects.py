@@ -147,7 +147,7 @@ def example3():
     point2 = rg.Point(200, 50)
     rectangle = rg.Rectangle(point1, point2)
     rectangle.attach_to(window)
-
+    rectangle .
     # ------------------------------------------------------------------
     # render: Draw ALL the objects attached to this window.
     # ------------------------------------------------------------------
